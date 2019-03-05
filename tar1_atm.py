@@ -1,5 +1,5 @@
-code = 1234
-balance = 1000
+code = int(1234)
+balance = int(1000)
 
 
 def getcode():
@@ -13,8 +13,15 @@ def printbalance():
     print("your current balance is:", balance)
 
 
+def cashwithdraw(curbalance):
+    amount = int(input("how much money do you want to withdraw "))
+    curbalance -= amount
+    return curbalance
+
+
 def main():
     getcode()
+    cashwithdraw()
 
 
 if __name__ == '__main__':
