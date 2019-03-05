@@ -1,12 +1,16 @@
 code = 1234
-amount = 1000
+balance = 1000
 
 
 def getcode():
-    entered = int(input("please enter the seceret code:"))
-    print(entered)
-    while entered != code:
-        entered = int(input("wrong code,please try again:"))
+    enteredcode = int(input("please enter the seceret code:"))
+    print(enteredcode)
+    while enteredcode != code:
+        enteredcode = int(input("wrong code,please try again:"))
+
+
+def printbalance():
+    print("your current balance is:", balance)
 
 
 def main():
