@@ -1,4 +1,4 @@
-
+import sys
 def getcode(code):
     enteredcode = int(input("please enter the seceret code:"))
     print(enteredcode)
@@ -18,6 +18,10 @@ def cashwithdraw(balance):
 
 def changecode(newcode):
     code = newcode
+
+
+def exit():
+    sys.exit()
 
 
 def main():
