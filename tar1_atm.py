@@ -16,8 +16,8 @@ def cashwithdraw(balance):
     return balance
 
 
-def changecode(newcode):
-    code = newcode
+def changecode():
+    return int(input("enter new secret code:"))
 
 
 def exit():
@@ -27,8 +27,30 @@ def exit():
 def main():
     code = int(1234)
     balance = int(1000)
-    getcode(code)
-    balance = cashwithdraw(balance)
+    uinput = 0
+    while uinput != 4:
+        getcode(code)
+        uinput = int(input("enter 1 to print you balance, 2 for cash withdrawal, 3 to change your code or 4 to exit "))
+        if uinput == 1:
+            printbalance(balance)
+        else:
+            if uinput == 2:
+                balance = cashwithdraw(balance)
+            else:
+                if uinput == 3:
+                    code = changecode()
+                else:
+                    if uinput == 4:
+                        exit()
+                    else:
+                        print("wrong inout, start over")
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
