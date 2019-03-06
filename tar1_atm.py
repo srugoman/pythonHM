@@ -1,27 +1,30 @@
-code = int(1234)
-balance = int(1000)
 
-
-def getcode():
+def getcode(code):
     enteredcode = int(input("please enter the seceret code:"))
     print(enteredcode)
     while enteredcode != code:
         enteredcode = int(input("wrong code,please try again:"))
 
 
-def printbalance():
+def printbalance(balance):
     print("your current balance is:", balance)
 
 
-def cashwithdraw(curbalance):
+def cashwithdraw(balance):
     amount = int(input("how much money do you want to withdraw "))
-    curbalance -= amount
-    return curbalance
+    balance -= amount
+    return balance
+
+
+def changecode(newcode):
+    code = newcode
 
 
 def main():
-    getcode()
-    cashwithdraw()
+    code = int(1234)
+    balance = int(1000)
+    getcode(code)
+    balance = cashwithdraw(balance)
 
 
 if __name__ == '__main__':
