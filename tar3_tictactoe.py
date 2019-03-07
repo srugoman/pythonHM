@@ -49,14 +49,11 @@ def checkobliques(game):
         return prev2
 
 
-
-
-
 def main():
     game = [[2, 0, 1],
             [2, 1, 0],
-            [1, 1, 1]]
-    print(checkobliques(game))
+            [1, 1, 2]]
+    print(checkobliques(game)+checkrows(game)+checkcols(game))
 
 
 if __name__ == "__main__":
