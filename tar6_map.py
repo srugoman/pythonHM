@@ -1,3 +1,6 @@
+def square(x):
+    return x * x
+
 
 def main():
     list = [1,2,3]
